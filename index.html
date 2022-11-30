@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:ital,wght@1,900&display=swap');
+        /*:root {
+            --texto: white;
+        }
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+
+            background: black;
+
+            overflow-y: hidden;
+
+            font-family: 'Roboto', sans-serif;
+        }
+        #cabecalho {
+            margin: 2% auto;
+
+            width: 96%;
+            height: 15vh;
+            border: 1px solid black;
+            border-radius: 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background-color: #AEB8FE;
+        }
+        #cabecalho_titulo {
+            margin-top: 15vh;
+        }
+        #sobre {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 30vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: var(--texto);
+        }
+        #languages-overflow {
+            display: flex;
+            justify-content: space-around;
+            gap: 3%;
+        }
+        #icons-container {
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+            width: 15%;
+        }
+        .icon {
+            width: 10%;
+            transition: 0.1s;
+            color: green;
+        }
+        .icon:hover {
+            transition: 0.1s;
+            transform: scale(1.4);
+        }
+        #javascript {
+            animation-name: pulandinho;
+            animation-duration: 1s;
+            animation-delay: 0.5s;
+            animation-iteration-count: infinite;
+            transition: all 500ms cubic-bezier(0.010, 0.835, 0.225, 1.015);
+            transition-timing-function: cubic-bezier(0.010, 0.835, 0.225, 1.015);
+        }
+        #html {
+            animation-name: pulandinho;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            transition: all 500ms cubic-bezier(0.010, 0.835, 0.225, 1.015);
+            transition-timing-function: cubic-bezier(0.010, 0.835, 0.225, 1.015);
+        }
+        #css {
+            animation-name: pulandinho;
+            animation-duration: 1s;
+            animation-delay: 1.5s;
+            animation-iteration-count: infinite;
+            transition: all 500ms cubic-bezier(0.010, 0.835, 0.225, 1.015);
+            transition-timing-function: cubic-bezier(0.010, 0.835, 0.225, 1.015);
+        }
+        #python {
+            animation-name: pulandinho;
+            animation-duration: 1s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            transition: all 500ms cubic-bezier(0.010, 0.835, 0.225, 1.015);
+            transition-timing-function: cubic-bezier(0.010, 0.835, 0.225, 1.015);
+        }
+        #github {
+            animation-name: pulandinho;
+            animation-duration: 1s;
+            animation-delay: 2.5s;
+            animation-iteration-count: infinite;
+            transition: all 500ms cubic-bezier(0.010, 0.835, 0.225, 1.015);
+            transition-timing-function: cubic-bezier(0.010, 0.835, 0.225, 1.015);
+        }
+        #git {
+            animation-name: pulandinho;
+            animation-duration: 1s;
+            animation-delay: 3s;
+            animation-iteration-count: infinite;
+            transition: all 500ms cubic-bezier(0.010, 0.835, 0.225, 1.015);
+            transition-timing-function: cubic-bezier(0.010, 0.835, 0.225, 1.015);
+        }
+        #title {
+            font-family: 'Oswald', sans-serif;
+            margin-left: 3%;
+        }
+        #email {
+            display: none;
+        }
+        #gmailBtn:hover #email {
+            display: block;
+        }
+        #sobre-msg {
+            font-size: 10pt;
+        }
+        svg {
+            width: 30%;
+        }
+        aside {
+            width: 50vh;
+        }
+        h1 {
+            font-size: 60pt;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+
+            color: #e74645;
+            text-shadow: 5px 5px #fb7756, 10px 10px #facd60, 15px 15px #fdfa66, 20px 20px #1ac0c6;
+        }
+        @keyframes pulandinho {
+            0% {
+                transform: scale(0.7);
+            }
+            50% {
+                transform: scale(1.1) rotate(50deg);
+            }
+            100% {
+                transform: scale(0.7);
+            }
+        } */
+        body {
+            margin: 0;
+            background-image: url(source/wallpaper.jpg);
+            overflow: hidden;
+        }
+        #navbar {
+            position: fixed;
+            bottom: 0;
+            height: 5vh;
+            width: 100%;
+            background: #245edb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #menu {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            height: 100%;
+            width: 10%;
+            background-color: #198d19;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        #menu-icon {
+            margin-left: 5px;
+            width: 20%;
+        }
+        #text-menu {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            margin-left: 10px;
+            font-size: 17pt;
+        }
+        #time-bar {
+            width: 7%;
+            font-size: 17pt;
+            font-size: 'Roboto', sans-serif;
+            color: white;
+            background-color: #629EEF;
+            height: 5vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #note-block {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            width: 50vh;
+            height: 50vh;
+            background-color: white;
+            border-radius: 10px;
+        }
+        #note-block > main {
+            padding: 10px;
+        }
+        .navbar-window {
+            height: 7%;
+            width: 100%;
+            background-color: #1067D0;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        #app-name {
+            margin-left: 10px;
+        }
+        .icons {
+            width: 15%;
+        }
+    </style>
+</head>
+<body>
+    <!-- <header id="cabecalho">
+        <h2 id="title" >Davi, o Desenvolvedor web</h2>
+        <div id="icons-container">
+            <svg id="githubBtn" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+            <svg onclick="alert('dlopes20067@gmail.com')" id="gmailBtn" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+            <svg id="redditBtn" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M440.3 203.5c-15 0-28.2 6.2-37.9 15.9-35.7-24.7-83.8-40.6-137.1-42.3L293 52.3l88.2 19.8c0 21.6 17.6 39.2 39.2 39.2 22 0 39.7-18.1 39.7-39.7s-17.6-39.7-39.7-39.7c-15.4 0-28.7 9.3-35.3 22l-97.4-21.6c-4.9-1.3-9.7 2.2-11 7.1L246.3 177c-52.9 2.2-100.5 18.1-136.3 42.8-9.7-10.1-23.4-16.3-38.4-16.3-55.6 0-73.8 74.6-22.9 100.1-1.8 7.9-2.6 16.3-2.6 24.7 0 83.8 94.4 151.7 210.3 151.7 116.4 0 210.8-67.9 210.8-151.7 0-8.4-.9-17.2-3.1-25.1 49.9-25.6 31.5-99.7-23.8-99.7zM129.4 308.9c0-22 17.6-39.7 39.7-39.7 21.6 0 39.2 17.6 39.2 39.7 0 21.6-17.6 39.2-39.2 39.2-22 .1-39.7-17.6-39.7-39.2zm214.3 93.5c-36.4 36.4-139.1 36.4-175.5 0-4-3.5-4-9.7 0-13.7 3.5-3.5 9.7-3.5 13.2 0 27.8 28.5 120 29 149 0 3.5-3.5 9.7-3.5 13.2 0 4.1 4 4.1 10.2.1 13.7zm-.8-54.2c-21.6 0-39.2-17.6-39.2-39.2 0-22 17.6-39.7 39.2-39.7 22 0 39.7 17.6 39.7 39.7-.1 21.5-17.7 39.2-39.7 39.2z"/></svg>
+        </div>
+    </header>
+    <main>
+        <header id="cabecalho_titulo">
+            <h1>
+                Estou pronto para te ajudar!
+            </h1>
+        </header>
+        <section id="sobre">
+            <aside>
+                <h3>Quem sou eu?</h3>
+                <p id="sobre-msg">
+                    Olá, meu nome é Davi!
+                    <br>
+                    E sou estudante da ETE Ministro Fernando Lyra.
+                    Onde faço um curso técnico em <strong>Desenvolvimento de Sistemas</strong>
+                </p>
+            </aside>
+            <aside id="tecnologias">
+                <h3>O que eu sei usar?</h3>
+                <div id="languages-overflow">
+                    <svg id="javascript" class="tecno" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z" fill="rgb(237, 188, 26)"/></svg>
+                    <svg id="html" class="tecno" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z" fill="#ed441a"/></svg>
+                    <svg id="css" class="tecno" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z" fill="#1a64ed"/></svg>
+                    5<svg id="python" class="tecno" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z" fill="#eddf1a"/></svg>
+                    <svg id="github" class="tecno" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" fill="#e8e8e8"/></svg>
+                    <svg id="git" class="tecno" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z" fill="#f74040"/></svg>
+                </div>
+            </aside>
+        </section>
+    </main> -->
+    <main>
+        <section id="note-block">
+            <header class="navbar-window">
+                <p id="app-name">
+                    Note block
+                </p>
+                <img class="icons" src="source/icons.jpg">
+            </header>
+            <main>
+                <h1>
+                    Olá, meu nom é Davi!
+                </h1>
+                <p>
+                    Eu sou um desenvolvedor web, e faço um curso de Tecnico em desenvolvimento de sistemas!
+                    <br>
+                    Se você tiver interesse, em meu trabalho, pode me contatar pelos seguintes links:
+                </p>
+                <a href="">Reddit</a>
+                <a href="">GitHub</a>
+                <p>Email: dlopes20067@gmail.com</p>
+            </main>
+        </section>
+    </main>
+    <footer id="navbar">
+        <div id="menu">
+            <img id="menu-icon" src="source/icon-windows.png">
+            <p id="text-menu">
+                start
+            </p>
+        </div>
+        <div id="time-bar">
+            <p id="hour">00:00</p>
+        </div>
+    </footer>
+    
+    <script>
+        let timeEl = document.querySelector('#hour')
+
+        let hours = new Date().getHours()
+        let minutes = new Date().getMinutes()
+
+        console.log(hours)
+
+        timeEl.innerText = `${hours}:${minutes}`
+    </script>
+</body>
+</html>     
